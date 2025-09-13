@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritam Parui - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
 
+        .scroll-to-section {
+            cursor: pointer;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-50 hover:text-cyan-400 transition-colors duration-300">Ritam Parui</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="scroll-to-section text-gray-400 hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="scroll-to-section text-gray-400 hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="scroll-to-section text-gray-400 hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-400 hover:text-cyan-400 transition-colors duration-300 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-90">
+            <div class="flex flex-col items-center py-4 space-y-4">
+                <a href="#about" class="scroll-to-section text-gray-400 hover:text-cyan-400 transition-colors duration-300 block w-full text-center">About</a>
+                <a href="#skills" class="scroll-to-section text-gray-400 hover:text-cyan-400 transition-colors duration-300 block w-full text-center">Skills</a>
+                <a href="#contact" class="scroll-to-section text-gray-400 hover:text-cyan-400 transition-colors duration-300 block w-full text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative flex items-center justify-center h-screen overflow-hidden">
+        <div class="relative z-10 p-10 text-center text-gray-50 bg-black bg-opacity-50 rounded-lg max-w-2xl mx-auto backdrop-blur-sm shadow-xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-up">Ritam Parui</h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-6">IoT, Cyber Security & Blockchain Technologist</p>
+            <p class="text-base md:text-lg text-gray-400">
+                A passionate B.Tech CSE student specializing in cutting-edge technologies.
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-28 fade-in">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-50 text-center">About Me</h2>
+                <div class="prose prose-invert lg:prose-xl mx-auto text-gray-300">
+                    <p class="text-lg leading-relaxed text-center">
+                        I am a 3rd-year B.Tech Computer Science and Engineering student at Sister Nivedita University, specializing in the exciting fields of Internet of Things (IoT), Cyber Security, and Blockchain Technology. My academic journey is complemented by hands-on experience and a strong passion for ethical hacking and secure system design. I am constantly exploring new challenges to expand my knowledge and practical expertise.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-28 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-50 text-center">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1: IoT Development -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transition-transform transform hover:scale-105 hover:shadow-2xl fade-in">
+                    <div class="flex items-center justify-center mb-4 text-cyan-400">
+                        <svg class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50 text-center">IoT Development</h3>
+                    <p class="text-gray-400 text-center">Building and deploying smart, interconnected devices and systems for various applications.</p>
+                </div>
+
+                <!-- Skill Card 2: Red Teaming -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transition-transform transform hover:scale-105 hover:shadow-2xl fade-in">
+                    <div class="flex items-center justify-center mb-4 text-cyan-400">
+                        <svg class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.61 5.61A9 9 0 015.39 5.39a9 9 0 1112.72 12.72z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50 text-center">Red Teaming</h3>
+                    <p class="text-gray-400 text-center">Simulating attacks to test and improve an organization's security posture and defenses.</p>
+                </div>
+
+                <!-- Skill Card 3: Bug Bounty -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 transition-transform transform hover:scale-105 hover:shadow-2xl fade-in">
+                    <div class="flex items-center justify-center mb-4 text-cyan-400">
+                        <svg class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50 text-center">Bug Bounty</h3>
+                    <p class="text-gray-400 text-center">Finding and responsibly disclosing vulnerabilities to companies for rewards and recognition.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-28 fade-in">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-700">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-50 text-center">Get in Touch</h2>
+                <div class="text-center text-gray-300">
+                    <p class="text-lg leading-relaxed mb-4">
+                        Feel free to connect with me to discuss collaborations, projects, or just to say hello!
+                    </p>
+                    <a href="mailto:your.email@example.com" class="inline-block bg-cyan-600 text-gray-50 font-bold py-3 px-8 rounded-full transition-colors duration-300 hover:bg-cyan-500 shadow-lg">
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-80 py-6 text-center text-gray-400">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2024 Ritam Parui. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.scroll-to-section').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for the fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+    </script>
+</body>
+</html>
